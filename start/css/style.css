@@ -321,6 +321,7 @@ margin-bottom: var(--mb-2);
     padding: 1rem;
     border-radius: .5rem;
     font-weight: var(--font-medium);
+    border: 0;
 }
 .button:hover{
     background-color: var(--first-color-alt);
@@ -863,6 +864,9 @@ text-align: center;
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--text-color-light);
+}
+#openmail{
+    opacity: 0;
 }
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */

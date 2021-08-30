@@ -182,3 +182,40 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/* Send email */
+/* openning your default mail app
+ const $form = document.querySelector("#form");
+const $buttonMailTo = document.querySelector("#openmail");
+$form.addEventListener("submit",handleSubmit)
+
+function handleSubmit(e) {
+    e.preventDefault();
+    const form = new FormData(this);
+    console.log(form.get("name"));
+    $buttonMailTo.setAttribute("href",`mailto:andercm15@gmail.com?subject= My project is about:  ${form.get("project")} - Name: ${(form.get("name"))} My email is: <${(form.get("email"))}>  &body= ${form.get("message")}`);
+    $buttonMailTo.click();
+} */
+
+//using an API
+const $form = document.querySelector("#form")
+$form.addEventListener("submit",handleSubmit)
+
+async function handleSubmit(e){
+    e.preventDefault();
+    const form = new FormData(this);
+    const response = await fetch(this.action, {
+        method: this.method,
+        body: form,
+        headers:{
+            "Accept" : "application/json"
+        }
+    })
+    if(response.ok){
+        this.reset();
+        alert("Gracias por contactarme, te escribiré pronto 😁")
+    }
+}
+
+/* styling alert */

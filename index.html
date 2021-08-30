@@ -12,6 +12,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="start/css/style.css">
     <link rel="stylesheet" href="start/css/swiper-bundle.min.css">
+    <!-- SWEET ALERT -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <title>Anderson Canales Portfolio</title>
 </head>
@@ -739,36 +741,41 @@
                     </div>
                     
                 </div>
-                <form action="" class="contact_form grid">
+                <form id="form" action="https://formspree.io/f/xayaanjk" method="POST" class="contact_form grid">
                     <div class="contact_inputs grid">
 
                         <div class="contact_content">
-                            <label for="" class="contact_label">Name</label>
-                            <input type="text" class="contact_input">
+                            <label for="name" class="contact_label">Name:</label>
+                            <input name="name" id="name" type="text" class="contact_input">
                         </div>
 
                         <div class="contact_content">
-                            <label for="" class="contact_label">Email</label>
-                            <input type="email" class="contact_input">
+                            <label for="email" class="contact_label">Your Email:</label>
+                            <input name="email" id="email" type="email" class="contact_input">
                         </div>
 
                         <div class="contact_content">
-                            <label for="" class="contact_label">Project</label>
-                            <input type="text" class="contact_input">
+                            <label for="project" class="contact_label">Your Project in mind:</label>
+                            <input name="project" id="project" type="text" class="contact_input">
                         </div>
 
                         <div class="contact_content">
-                            <label for="" class="contact_label">Message</label>
-                            <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                            <label for="message" class="contact_label">Message:</label>
+                            <textarea id="message" name="message" id="" cols="0" rows="7" class="contact_input"></textarea>
                         </div>
                         <div>
-                            <a href="" class="button button-flex">
+                            <button type="submit"  class="button button-flex">  
+                                    
                                 Send Message
-                                <i class="uil uil-message button_icon"></i>
-                            </a>
+                                <i class="uil uil-message button_icon"></i>    
+                            </button> 
+                              
+                              
+                            
                         </div>
                     </div>
                 </form>
+                <!-- <a href="mailto:andercm15@gmail.com" id="openmail">mail</a>  -->
             </div>
         </section>
 
