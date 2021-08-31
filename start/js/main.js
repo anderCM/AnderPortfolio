@@ -214,8 +214,20 @@ async function handleSubmit(e){
     })
     if(response.ok){
         this.reset();
-        alert("Gracias por contactarme, te escribiré pronto 😁")
+        swal("Mensaje Recibido","Gracias por escribirme, me pondré en contacto contigo pronto","success",{
+            buttons:false  
+        });
     }
 }
 
-/* styling alert */
+/* Translate */
+var check=document.querySelector(".check");
+check.addEventListener("click",language);
+function language(){
+    let id=check.checked;
+    if(id == true){
+        location.href="start/sp/index.html";
+    }else{
+        location.href="../../index.html";
+    }
+}
